@@ -50,15 +50,15 @@ Figure 02  Encoder 8 * 3
 Developed by: Magesh C M 
 
 Reg no:212223220053
-
-module encoder_top(din, a, b, c); 
-input [0:7] din; 
-output a,b,c; 
-assign a=din[4] | din[5] | din[6] | din[7]; 
-assign b=din[2] | din[3] | din[6] | din[7];
-assign c=din[2] | din[4] | din[6] | din[7];
+```
+module encoder(a0,a1,a2,d0,d1,d2,d3,d4,d5,d6,d7);
+input d0,d1,d2,d3,d4,d5,d6,d7;
+output a0,a1,a2;
+assign a0=d1|d3|d5|d7;
+assign a1=d2|d3|d6|d7;
+assign a2=d4|d5|d6|d7;
 endmodule
-*/
+```
 
 **RTL LOGIC FOR Encoder 8 To 3 in Dataflow Modelling**
 
